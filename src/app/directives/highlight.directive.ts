@@ -7,10 +7,16 @@ export class HighlightDirective {
 
   constructor(private el: ElementRef, private renderer: Renderer2 ) {}
 
-  @Input('appHighLight') inputColor: string;
+  private _defaultColor;
+
+  @Input('appHighLight') highlightColor: string;
+  // можна об'явити приватне поле та встановити його значення безпосередньо в @Input використавши set
+  @Input() set defaultColor(value: string) {
+    this._defaultColor = value;
+  }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.changeColor(this.inputColor);
+    this.changeColor(this.highlightColor || this._defaultColor || 'olive');
   }
   @HostListener('mouseleave') onMouseLeave() {
     this.changeColor(null);

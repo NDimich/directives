@@ -12,7 +12,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(private renderer: Renderer2) {}
 
-  color = 'blue';
+  color: string;
 
   ngOnInit(): void {
   }

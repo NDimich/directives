@@ -1,11 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  <p  [appHighLight]="color">
+  <p [appHighLight]="color">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad architecto eum harum ipsam maxime minima nemo nobis obcaecati placeat porro reprehenderit sed, sunt, temporibus ullam ut, vitae voluptates voluptatibus.
+  </p>
+  <p [appHighLight]="color" defaultColor="gold">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias animi asperiores at consectetur earum esse harum impedit ipsa minima natus odit omnis perferendis qui, repellat suscipit vel? Laborum, veniam!
   </p>
 </div>
 <div id="first" #first>
 
+</div>
+<div id="second">
+    <ul>
+      <li>Grey <input type="radio" name="color" (click)="color = 'grey'"></li>
+      <li>Purple<input type="radio" name="color" (click)="color = 'purple'"></li>
+      <li>Orange<input type="radio" name="color" (click)="color = 'orange'"></li>
+    </ul>
 </div>
 
 <input type="text"><br>
